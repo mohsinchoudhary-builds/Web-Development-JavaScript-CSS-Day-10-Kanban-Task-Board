@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Task Board</title>
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📋 Kanban Task Board</h1>
+            <p>Manage your tasks easily</p>
+        </header>
+
+        <!-- Add Task Section -->
+        <div class="task-form">
+            <input type="text" id="taskInput" placeholder="Enter task title...">
+            <input type="text" id="descriptionInput" placeholder="Enter description...">
+            <button id="addTaskBtn">+ Add Task</button>
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="🔍 Search tasks...">
+        </div>
+
+        <!-- Kanban Board -->
+        <div class="board">
+
+            <!-- To Do -->
+            <div class="column" data-status="todo">
+                <div class="column-header">
+                    <h2>📝 To Do</h2>
+                    <span id="todoCount">0</span>
+                </div>
+
+                <div class="task-list" id="todoList"></div>
+            </div>
+
+            <!-- In Progress -->
+            <div class="column" data-status="progress">
+                <div class="column-header">
+                    <h2>🔄 In Progress</h2>
+                    <span id="progressCount">0</span>
+                </div>
+
+                <div class="task-list" id="progressList"></div>
+            </div>
+
+            <!-- Completed -->
+            <div class="column" data-status="completed">
+                <div class="column-header">
+                    <h2>✅ Completed</h2>
+                    <span id="completedCount">0</span>
+                </div>
+
+                <div class="task-list" id="completedList"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
